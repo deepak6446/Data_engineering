@@ -1,0 +1,22 @@
+sisence is a BI tool like Tabluea
+
+Download jar file from presto official site 
+
+Place the jar file at location JDBC JARs Folder location below: 
+
+use following connection config to connet to presto
+
+Connection String
+jdbc:presto://'public-ip-address':8889/hive/default   (default port used by presto is 8889)
+
+JDBC JARs Folder
+C:\Program Files\Sisense\DataConnectors\jdbcdrivers\presto
+
+Driver's Class Name
+com.facebook.presto.jdbc.PrestoDriver
+
+User Name
+deepak (can be anything)
+
+Password
+
