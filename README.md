@@ -9,33 +9,33 @@ EMR cluster on amazon is preconfigured to install presto and hive (just select a
 select number of worker nodes
 
 ## step2: configure DB using hive meta store
-- follow following commands inside presto master node
---> hive
---> CREATE EXTERNAL TABLE `table_name`(
-        >   `field_1` string,
-        >   `field_2` string,
-        )
-    > ROW FORMAT SERDE
-    >   'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe'
-    > STORED AS INPUTFORMAT
-    >   'org.apache.hadoop.mapred.TextInputFormat'
-    > OUTPUTFORMAT
-    >   'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
-    > LOCATION
-    >   's3://sample.db/table_name'
-    > TBLPROPERTIES (
-    >   'has_encrypted_data'='false',
-    >   'transient_lastDdlTime'='1572331300');
+follow following commands inside presto master node </br>
+--> hive </br>
+--> CREATE EXTERNAL TABLE `table_name`( </br>
+        >   `field_1` string, </br>
+        >   `field_2` string, </br>
+        ) </br>
+    > ROW FORMAT SERDE </br>
+    >   'org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe' </br>
+    > STORED AS INPUTFORMAT </br>
+    >   'org.apache.hadoop.mapred.TextInputFormat' </br>
+    > OUTPUTFORMAT </br>
+    >   'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat' </br>
+    > LOCATION </br>
+    >   's3://sample.db/table_name' </br>
+    > TBLPROPERTIES ( </br>
+    >   'has_encrypted_data'='false', </br>
+    >   'transient_lastDdlTime'='1572331300'); </br>
 
---> exit()
---> presto
---> use hive.default;   (use hive meta store)
+--> exit() </br>
+--> presto </br>
+--> use hive.default;   (use hive meta store) </br>
 
-## step3: update security policy
-update security policies for inbound ports to open port 8889 and ip of instance from which request will come to master node in emr.
+## step3: update security policy </br>
+update security policies for inbound ports to open port 8889 and ip of instance from which request will come to master node in emr. </br>
 
-## step4: query using python script or JDBC driver
-change IP and Port in connect_presto_db.py and run using python connect_presto_db.py
-or look in file sisence_connect_jdbc_to_query_using jdbc
+## step4: query using python script or JDBC driver </br>
+change IP and Port in connect_presto_db.py and run using python connect_presto_db.py </br>
+or look in file sisence_connect_jdbc_to_query_using jdbc </br>
 
 
