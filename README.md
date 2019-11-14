@@ -9,7 +9,7 @@ EMR cluster on amazon is preconfigured to install presto and hive (just select a
 select number of worker nodes
 
 ## step2: configure DB using hive meta store
-follow following commands inside presto master node
+- follow following commands inside presto master node
 --> hive
 --> CREATE EXTERNAL TABLE `table_name`(
         >   `field_1` string,
