@@ -12,3 +12,6 @@
 To run any DAGs, you need to make sure two processes are running:<br>
 1. airflow webserver<br>
 2. airflow scheduler
+
+
+ETL for loading data MongoDB to s3 and storing in Athena.
