@@ -25,7 +25,7 @@ hadoop_conf.set("s3a.secret.key", secretAccessKey)
 sqlContext = pyspark.SQLContext(sc)
 
 df = sqlContext.read.csv(
-    "s3a://zee5-telco/Idea_App_in_App/IMTV_ZEE5_VOD_USAGE_2019-03-19_001.csv")
+    "s3a://bucket/filepath")
 df.show()
 
 print("KATEEL")
