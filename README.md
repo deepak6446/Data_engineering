@@ -8,11 +8,10 @@
 [connect s3 and read file in s3 in spark](https://github.com/deepak6446/Data_engineering/blob/master/test_programmes/connect_s3_using_keys.py)
 
 ## 4. Recursive function to flatten data and replace special chars
-[functions](https://github.com/deepak6446/Data_engineering/blob/master/test_programmes/cleaning_data_rec_json.py)
+[Functions](https://github.com/deepak6446/Data_engineering/blob/master/test_programmes/cleaning_data_rec_json.py)
 
-## Pre
 ## 5. Airflow scheduling jobs with airflow docker
-[notebook](https://github.com/deepak6446/Data_engineering/blob/master/Airflow_Docker)
+[Notebook](https://github.com/deepak6446/Data_engineering/blob/master/Airflow_Docker)
 
 todo:
 doceker airflow
