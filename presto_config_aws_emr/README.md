@@ -1,14 +1,14 @@
 # presto-parquet-files-aws-emr
 How to configure prestro cluster on emr and use hive metastore to run queries on parquet in s3 
 
-# what is presto:
+# What is Presto:
 Presto is a distributed SQL query engine optimized for ad hoc analysis. It supports the ANSI SQL standard, including complex queries, aggregations, joins, and window functions. Presto can run on multiple data sources, including Amazon S3.
 
-## step1: create an emr instance
+## Step1: Create An EMR Instance
 EMR cluster on amazon is preconfigured to install presto and hive (just select advance while configuring instance and select apps)
 select number of worker nodes
 
-## step2: configure DB using hive meta store
+## Step2: configure DB using hive meta store
 follow following commands inside presto master node </br>
 --> hive </br>
 --> CREATE EXTERNAL TABLE `table_name`( </br>
@@ -31,10 +31,10 @@ follow following commands inside presto master node </br>
 --> presto </br>
 --> use hive.default;   (use hive meta store) </br>
 
-## step3: update security policy </br>
+## Step3: update security policy </br>
 update security policies for inbound ports to open port 8889 and ip of instance from which request will come to master node in emr. </br>
 
-## step4: query using python script or JDBC driver </br>
+## Step4: query using python script or JDBC driver </br>
 change IP and Port in connect_presto_db.py and run using python connect_presto_db.py </br>
 or look in file sisence_connect_jdbc_to_query_using jdbc </br>
 
