@@ -11,6 +11,6 @@
 [Functions](https://github.com/deepak6446/Data_engineering/blob/master/test_programmes/cleaning_data_rec_json.py)
 
 ## 5. Airflow scheduling jobs with airflow docker
-ETL process to load data from s3 flatten and load in athena.
+ETL process to load data from MongoDB flatten and load in athena.
 [DAGS](https://github.com/deepak6446/Data_engineering/blob/master/Airflow_Docker/airflow/dags/rcs_mongo_to_s3.py)
 [Load Data from MongoDB](https://github.com/deepak6446/Data_engineering/blob/master/Airflow_Docker/airflow/dags/python/rcs_mongo_to_s3.py)
