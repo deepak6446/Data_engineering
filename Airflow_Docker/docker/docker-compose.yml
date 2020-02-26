@@ -24,6 +24,7 @@ services:
     environment:
       - LOAD_EX=n
       - EXECUTOR=Local
+      # For encrypted connection passwords
       - FERNET_KEY=jsDPRErfv8Z_eVTnGfF8ywd19j4pyqE3NpdUBA_oRTo=
     volumes:
       # airflow access all dags from this location 
